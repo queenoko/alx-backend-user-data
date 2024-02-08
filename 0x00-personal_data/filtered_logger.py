@@ -54,7 +54,8 @@ def get_db() -> mysql.connector.connection.MySQLConnection:
 
 
 def main():
-    """Logs the information about user records in a table.
+    """This function Logs the information
+    about user records in a table.
     """
     fields = "name,email,phone,ssn,password,ip,last_login,user_agent"
     columns = fields.split(',')
@@ -76,7 +77,7 @@ def main():
 
 
 class RedactingFormatter(logging.Formatter):
-    """ Redacting Formatter class
+    """ This class is the Redacting Formatter for display
     """
 
     REDACTION = "***"
@@ -89,7 +90,7 @@ class RedactingFormatter(logging.Formatter):
         self.fields = fields
 
     def format(self, record: logging.LogRecord) -> str:
-        """formats a LogRecord.
+        """Function to formats a LogRecord.
         """
         msg = super(RedactingFormatter, self).format(record)
         txt = filter_datum(self.fields, self.REDACTION, msg, self.SEPARATOR)
