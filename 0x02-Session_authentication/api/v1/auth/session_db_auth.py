@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Define class SessionDButh
+The script Define class SessionDButh
 """
 from .session_exp_auth import SessionExpAuth
 from models.user_session import UserSession
@@ -8,13 +8,14 @@ from models.user_session import UserSession
 
 class SessionDBAuth(SessionExpAuth):
     """
-    Definition of SessionDBAuth class that persists session data
+    The class Definition of SessionDBAuth class
+    that persists session data
     in a database
     """
 
     def create_session(self, user_id=None):
         """
-        Create a Session ID for a user_id
+        This Create a Session ID for a user_id
         Args:
            user_id (str): user id
         """
