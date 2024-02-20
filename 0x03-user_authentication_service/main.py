@@ -62,7 +62,7 @@ def log_in_wrong_password(email: str, password: str) -> None:
 
 
 def profile_unlogged() -> None:
-    """This function tests the behavior of trying to 
+    """This function tests the behavior of trying to
     retrieve profile information
     while being logged out.
     """
@@ -99,7 +99,7 @@ def profile_logged(session_id: str) -> None:
 
 
 def log_out(session_id: str) -> None:
-    """The function to tests the process of 
+    """The function to tests the process of
     logging out from a session.
 
     Args:
